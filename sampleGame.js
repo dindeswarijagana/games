@@ -36,21 +36,20 @@ function getGift(userNum, gift) {
   return userGift;
 }
 
-function startGame(userName){
-  console.log(lottery(3, userName));
+function startGame(userName, luckyNum){
+  console.log(lottery(3, userName, luckyNum));
 }
 
-function lottery(userChances, userName) {
+function lottery(userChances, userName, luckyNum) {
   if (userChances === 0) {
     return "BETTER LUCK NEXT TIME🙃 "; 
   }
   
   const userNum = +(prompt("ENTER A NUMBER"));
-  const luckyNum = Math.round(Math.random() * 10);
   
   if (userNum === luckyNum) {
-    console.log(getGift(userNum, '| 🧸 '));
-    return "CONGRATULATIONS" + userName + "YOU GOT A TEDDY";  
+    console.log(getGift(userNum, '| 🏍️  '));
+    return "CONGRATULATIONS 🥳" + userName + " YOU GOT A BIKE 🏍️";  
   }
 
   console.log(getGift(userNum, '| 👎 '));
@@ -59,13 +58,13 @@ function lottery(userChances, userName) {
 }
 
 if (userOpinion) {
+  const luckyNum = 5;
   const userName = prompt("ENTER YOUR NAME");
-  console.log(userName + " YOU HAVE ONLY 3 CHANCES TO TRY");
 
+  console.log(userName + " YOU HAVE ONLY 3 CHANCES TO TRY");
   console.log( '\n\n' + getGift(0, ''));
   console.log("HOPE YOU WILL WIN THE LOTTERY");
-  startGame(userName);
-  
+  startGame(userName, luckyNum);  
 }
 
 console.log("OK BYE!");   
