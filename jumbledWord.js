@@ -1,20 +1,22 @@
 function getJumbleWord(wordNumber) {
   switch (wordNumber) {
-    case 1: return "PPARE";
-    case 2: return "SSTESR";
-    case 3: return "NEXOTTC";
-    case 4: return "RRVPBOE";
-    case 5: return "MARED";
+    case 1: return "GRADNE";
+    case 2: return "SMMEUR";
+    case 3: return "GSGE";
+    case 4: return "ELVART";
+    case 5: return "ROLFEW";
+    case 6: return "REMOMY";
   }
 }
 
 function getActualWord(wordNumber) {
   switch (wordNumber) {
-    case 1: return "PAPER";
-    case 2: return "STRESS";
-    case 3: return "CONTEXT";
-    case 4: return "PROVERB";
-    case 5: return "DREAM";
+    case 1: return "GARDEN";
+    case 2: return "SUMMER";
+    case 3: return "EGGS";
+    case 4: return "TRAVEL";
+    case 5: return "FLOWER";
+    case 6: return "MEMORY"
   }
 }
 
@@ -45,7 +47,7 @@ function giveScore(actualWord, blanks, score, index) {
   const userWord = prompt("ENTER THE WORD:");
 
   if (userWord === actualWord) {
-    return score + 10;
+    return score + 20;
   }
 
   console.log("❌ YOU LOST 3 MARKS FOR WRONG ARRANGEMENT\n");
@@ -89,6 +91,6 @@ function startGame(wordNumber) {
 }
 
 const userName = prompt("enter your Name");
-const wordNumber = Math.floor(Math.random() * 6);
+const wordNumber = Math.ceil(Math.random() * 6);
 
 console.log(startGame(wordNumber));
